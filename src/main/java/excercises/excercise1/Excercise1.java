@@ -63,5 +63,65 @@ public class Excercise1 {
 
     }
 
+    /**
+     * Measures the algorithm an amount of times and returns the dataset
+     */
+    private static XYSeriesCollection measureAlgorithm2(final String label, XYSeriesCollection dataset, final int times) {
+
+
+        if (times == 0) {
+            return dataset;
+        }
+
+        XYSeries series = new XYSeries(label + " nr " + times);
+
+
+        Measurement<Integer> measureAlgorithm1 = Algorithms::generatePermutations2;
+
+
+        System.out.println("Measuring " + label + " nr " +  times);
+        series.add(measureAlgorithm1.measure(100000, 100000));
+        series.add(measureAlgorithm1.measure(500000, 500000));
+        series.add(measureAlgorithm1.measure(1000000, 1000000));
+        series.add(measureAlgorithm1.measure(5000000, 5000000));
+        series.add(measureAlgorithm1.measure(10000000, 10000000));
+        System.out.println("Measurement done");
+
+        dataset.addSeries(series);
+
+        return measureAlgorithm1(label, dataset, times - 1);
+
+    }
+
+    /**
+     * Measures the algorithm an amount of times and returns the dataset
+     */
+    private static XYSeriesCollection measureAlgorithm3(final String label, XYSeriesCollection dataset, final int times) {
+
+
+        if (times == 0) {
+            return dataset;
+        }
+
+        XYSeries series = new XYSeries(label + " nr " + times);
+
+
+        Measurement<Integer> measureAlgorithm1 = Algorithms::generatePermutations2;
+
+
+        System.out.println("Measuring " + label + " nr " +  times);
+        series.add(measureAlgorithm1.measure(5000000, 5000000));
+        series.add(measureAlgorithm1.measure(10000000, 10000000));
+        series.add(measureAlgorithm1.measure(20000000, 20000000));
+        series.add(measureAlgorithm1.measure(40000000, 40000000));
+        series.add(measureAlgorithm1.measure(80000000, 80000000));
+        System.out.println("Measurement done");
+
+        dataset.addSeries(series);
+
+        return measureAlgorithm1(label, dataset, times - 1);
+
+    }
+
 
 }

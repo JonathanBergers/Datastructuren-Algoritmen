@@ -16,8 +16,6 @@ public class Algorithms {
     public static int[] generatePermutations1(int n){
         int[] permutations = new int[n -1];
 
-
-
         for(int k=0; k<n -1; k++){
             int randomNumber = randInt(n);
             while(isInArray(randomNumber, permutations)){

@@ -26,11 +26,23 @@ public class Excercise1 {
 
     public static void main(String[] args) {
 
-
+        measureAlgorithm1("compiler", new XYSeriesCollection(), 2);
         XYSeriesCollection dataset = measureAlgorithm1("Algorithm1", new XYSeriesCollection(), 10);
-
-
         new MeasurementGraph("opdracht 1", "N", "T(ms)", dataset).render();
+
+
+        //TODO uncomment for algorithm 2
+//        measureAlgorithm2("compiler", new XYSeriesCollection(), 2);
+//        XYSeriesCollection dataset = measureAlgorithm2("Algorithm2", new XYSeriesCollection(), 10);
+//        new MeasurementGraph("opdracht 2", "N", "T(ms)", dataset).render();
+
+
+        //TODO uncomment for algorithm 3
+//        measureAlgorithm3("compiler", new XYSeriesCollection(), 2);
+//        XYSeriesCollection dataset = measureAlgorithm3("Algorithm3", new XYSeriesCollection(), 10);
+//        new MeasurementGraph("opdracht 3", "N", "T(ms)", dataset).render();
+
+
     }
 
 
@@ -76,20 +88,20 @@ public class Excercise1 {
         XYSeries series = new XYSeries(label + " nr " + times);
 
 
-        Measurement<Integer> measureAlgorithm1 = Algorithms::generatePermutations2;
+        Measurement<Integer> measureAlgorithm2 = Algorithms::generatePermutations2;
 
 
         System.out.println("Measuring " + label + " nr " +  times);
-        series.add(measureAlgorithm1.measure(100000, 100000));
-        series.add(measureAlgorithm1.measure(500000, 500000));
-        series.add(measureAlgorithm1.measure(1000000, 1000000));
-        series.add(measureAlgorithm1.measure(5000000, 5000000));
-        series.add(measureAlgorithm1.measure(10000000, 10000000));
+        series.add(measureAlgorithm2.measure(100000, 100000));
+        series.add(measureAlgorithm2.measure(500000, 500000));
+        series.add(measureAlgorithm2.measure(1000000, 1000000));
+        series.add(measureAlgorithm2.measure(5000000, 5000000));
+        series.add(measureAlgorithm2.measure(10000000, 10000000));
         System.out.println("Measurement done");
 
         dataset.addSeries(series);
 
-        return measureAlgorithm1(label, dataset, times - 1);
+        return measureAlgorithm2(label, dataset, times - 1);
 
     }
 
@@ -106,20 +118,20 @@ public class Excercise1 {
         XYSeries series = new XYSeries(label + " nr " + times);
 
 
-        Measurement<Integer> measureAlgorithm1 = Algorithms::generatePermutations2;
+        Measurement<Integer> measureAlgorithm3 = Algorithms::generatePermutations3;
 
 
-        System.out.println("Measuring " + label + " nr " +  times);
-        series.add(measureAlgorithm1.measure(5000000, 5000000));
-        series.add(measureAlgorithm1.measure(10000000, 10000000));
-        series.add(measureAlgorithm1.measure(20000000, 20000000));
-        series.add(measureAlgorithm1.measure(40000000, 40000000));
-        series.add(measureAlgorithm1.measure(80000000, 80000000));
+        System.out.println("Measuring " + label + " nr " + times);
+        series.add(measureAlgorithm3.measure(5000000, 5000000));
+        series.add(measureAlgorithm3.measure(10000000, 10000000));
+        series.add(measureAlgorithm3.measure(20000000, 20000000));
+        series.add(measureAlgorithm3.measure(40000000, 40000000));
+        series.add(measureAlgorithm3.measure(80000000, 80000000));
         System.out.println("Measurement done");
 
         dataset.addSeries(series);
 
-        return measureAlgorithm1(label, dataset, times - 1);
+        return measureAlgorithm3(label, dataset, times - 1);
 
     }
 

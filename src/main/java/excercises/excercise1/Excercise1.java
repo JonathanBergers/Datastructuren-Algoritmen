@@ -117,7 +117,7 @@ public class Excercise1 {
             int[] a = new int[n];
             for(int k=0; k<n; k++){
                 a[k]=k;
-                swap(a, k, randInt(0, k));
+                swap(a, k, randInt(0, k+1));
             }
             return a;
         }
@@ -142,6 +142,50 @@ public class Excercise1 {
             for(int i : a){
                 s+=i;
                 s+="|";
+            }
+            return s;
+        }
+
+        private static int[] countFirst(int[] count, int first) {
+            count[first] += 1;
+            return count;
+        }
+
+        private static String firstCountToString(int[] firstCount) {
+            String s = "\n########## FIRSTCOUNT ##########";
+            s+="\nNUMBERS\t|";
+            for (int i = 0; i < firstCount.length; i++) {
+                s += " ";
+                s += i;
+                s += "\t|";
+            }
+            s+="\nCOUNT\t|";
+            for (int i : firstCount) {
+                s += " ";
+                s += i;
+                s += "\t|";
+            }
+            return s;
+        }
+
+        private static int[] countLast(int[] count, int last) {
+            count[last] += 1;
+            return count;
+        }
+
+        private static String lastCountToString(int[] lastCount) {
+            String s = "\n########## LASTCOUNT ###########";
+            s+="\nNUMBERS\t|";
+            for (int i = 0; i < lastCount.length; i++) {
+                s += " ";
+                s += i;
+                s += "\t|";
+            }
+            s+="\nCOUNT\t|";
+            for (int i : lastCount) {
+                s += " ";
+                s += i;
+                s += "\t|";
             }
             return s;
         }

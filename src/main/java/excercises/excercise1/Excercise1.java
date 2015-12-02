@@ -1,6 +1,9 @@
 package excercises.excercise1;
 
+import com.sun.istack.internal.Nullable;
 import excercises.applet.MeasurementGraph;
+import excercises.utilities.Algorithms;
+import excercises.utilities.Measurement;
 import org.jfree.data.xy.XYDataItem;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
@@ -22,176 +25,115 @@ public class Excercise1 {
 
 
     public static void main(String[] args) {
-        plotEx1();
+
+        measureAlgorithm1("compiler", new XYSeriesCollection(), 2);
+        XYSeriesCollection dataset = measureAlgorithm1("Algorithm1", new XYSeriesCollection(), 10);
+        new MeasurementGraph("opdracht 1", "N", "T(ms)", dataset).render();
+
+
+        //TODO uncomment for algorithm 2
+//        measureAlgorithm2("compiler", new XYSeriesCollection(), 2);
+//        XYSeriesCollection dataset = measureAlgorithm2("Algorithm2", new XYSeriesCollection(), 10);
+//        new MeasurementGraph("opdracht 2", "N", "T(ms)", dataset).render();
+
+
+        //TODO uncomment for algorithm 3
+//        measureAlgorithm3("compiler", new XYSeriesCollection(), 2);
+//        XYSeriesCollection dataset = measureAlgorithm3("Algorithm3", new XYSeriesCollection(), 10);
+//        new MeasurementGraph("opdracht 3", "N", "T(ms)", dataset).render();
+
+
     }
 
-    private static void plotEx1(){
+
+    /**
+     * Measures the algorithm an amount of times and returns the dataset
+     */
+    private static XYSeriesCollection measureAlgorithm1(final String label, XYSeriesCollection dataset, final int times) {
 
 
-        XYSeriesCollection dataset = new XYSeriesCollection();
+        if (times == 0) {
+            return dataset;
+        }
 
-        XYSeries series = new XYSeries("algorithm1");
+        XYSeries series = new XYSeries(label + " nr " + times);
 
-        Function<Integer, Object> algorithm1 = new Function<Integer, Object>() {
-            public Object apply(Integer integer) {
-                Algorithms.algorithm1(integer, 0, integer);
-                return null;
-            }
-        };
 
-        series.add(measureAlgorithm(1000,algorithm1));
-        series.add(measureAlgorithm(10000,algorithm1));
-        series.add(measureAlgorithm(20000,algorithm1));
-        series.add(measureAlgorithm(50000,algorithm1));
-        series.add(measureAlgorithm(100000,algorithm1));
+        Measurement<Integer> measureAlgorithm1 = Algorithms::generatePermutations1;
+
+
+        System.out.println("Measuring " + label + " nr " +  times);
+        series.add(measureAlgorithm1.measure(10000, 10000));
+        series.add(measureAlgorithm1.measure(20000, 20000));
+        series.add(measureAlgorithm1.measure(50000, 50000));
+        series.add(measureAlgorithm1.measure(100000, 100000));
+        System.out.println("Measurement done");
+
         dataset.addSeries(series);
 
-        new MeasurementGraph("opdracht 1", "T", "N", dataset).render();
+        return measureAlgorithm1(label, dataset, times - 1);
 
     }
 
-    private static XYDataItem measureAlgorithm(int n, Function<Integer, Object> algorithmCall){
-
-        long startTime = System.currentTimeMillis();
-        algorithmCall.apply(n);
-        long endTime = System.currentTimeMillis();
-        return new XYDataItem(endTime-startTime, n);
-    }
+    /**
+     * Measures the algorithm an amount of times and returns the dataset
+     */
+    private static XYSeriesCollection measureAlgorithm2(final String label, XYSeriesCollection dataset, final int times) {
 
 
-
-    static class Algorithms{
-
-
-        /**Generates an array of length n
-         * with a random permutation of the numbers between the left and rightbound
-         *
-         * @param n
-         * @param leftBound the left number for the range of the random numbers
-         * @param rightBound right bound for the range for random numbers
-         * @return
-         */
-        public static int[] algorithm1(int n, int leftBound, int rightBound){
-            assert leftBound < rightBound: "choose a leftbound smaller than the rightbound";
-            assert rightBound - leftBound > n: "not enough random numbers possible";
-
-
-            int[] permutations = new int[n];
-
-            for(int k=0; k<n; k++){
-                int randomNumber = randInt(leftBound, rightBound);
-                while(isInArray(randomNumber, permutations)){
-                    randomNumber = randInt(leftBound, rightBound);
-                }
-                permutations[k]=randomNumber;
-            }
-
-            return permutations;
-        }
-        private static boolean isInArray(int i, int[] array){
-            for(int j : array){
-                if(j==i){
-                    return true;
-                }
-            }
-            return false;
+        if (times == 0) {
+            return dataset;
         }
 
-        //TODO Javadoc
-        public static int[] algorithm2(int n, int leftBound, int rightBound){
-            int[] a = new int[n];
-            boolean[] used = new boolean[rightBound];
-            for(int k=0; k<n; k++){
-                int number = randInt(leftBound, rightBound);
-                while(used[number]){
-                    number = randInt(leftBound, rightBound);
-                }
-                used[number]=true;
-                a[k]=number;
-            }
-            return a;
-        }
-
-        //opdracht 3 shit
-        public static int[] algorithm3(int n){
-            int[] a = new int[n];
-            for(int k=0; k<n; k++){
-                a[k]=k;
-                swap(a, k, randInt(0, k+1));
-            }
-            return a;
-        }
-
-        private static int[] swap(int[] a, int index1, int index2){
-            int i = a[index1];
-            a[index1] = a[index2];
-            a[index2] = i;
-            return a;
-        }
+        XYSeries series = new XYSeries(label + " nr " + times);
 
 
+        Measurement<Integer> measureAlgorithm2 = Algorithms::generatePermutations2;
 
 
+        System.out.println("Measuring " + label + " nr " +  times);
+        series.add(measureAlgorithm2.measure(100000, 100000));
+        series.add(measureAlgorithm2.measure(500000, 500000));
+        series.add(measureAlgorithm2.measure(1000000, 1000000));
+        series.add(measureAlgorithm2.measure(5000000, 5000000));
+        series.add(measureAlgorithm2.measure(10000000, 10000000));
+        System.out.println("Measurement done");
 
+        dataset.addSeries(series);
 
-        private static int randInt(int i, int j){
-            return (int) (Math.random() * (j-i)) +i;
-        }
-        private static String arrayToString(int[] a){
-            String s = "|";
-            for(int i : a){
-                s+=i;
-                s+="|";
-            }
-            return s;
-        }
-
-        private static int[] countFirst(int[] count, int first) {
-            count[first] += 1;
-            return count;
-        }
-
-        private static String firstCountToString(int[] firstCount) {
-            String s = "\n########## FIRSTCOUNT ##########";
-            s+="\nNUMBERS\t|";
-            for (int i = 0; i < firstCount.length; i++) {
-                s += " ";
-                s += i;
-                s += "\t|";
-            }
-            s+="\nCOUNT\t|";
-            for (int i : firstCount) {
-                s += " ";
-                s += i;
-                s += "\t|";
-            }
-            return s;
-        }
-
-        private static int[] countLast(int[] count, int last) {
-            count[last] += 1;
-            return count;
-        }
-
-        private static String lastCountToString(int[] lastCount) {
-            String s = "\n########## LASTCOUNT ###########";
-            s+="\nNUMBERS\t|";
-            for (int i = 0; i < lastCount.length; i++) {
-                s += " ";
-                s += i;
-                s += "\t|";
-            }
-            s+="\nCOUNT\t|";
-            for (int i : lastCount) {
-                s += " ";
-                s += i;
-                s += "\t|";
-            }
-            return s;
-        }
+        return measureAlgorithm2(label, dataset, times - 1);
 
     }
 
+    /**
+     * Measures the algorithm an amount of times and returns the dataset
+     */
+    private static XYSeriesCollection measureAlgorithm3(final String label, XYSeriesCollection dataset, final int times) {
+
+
+        if (times == 0) {
+            return dataset;
+        }
+
+        XYSeries series = new XYSeries(label + " nr " + times);
+
+
+        Measurement<Integer> measureAlgorithm3 = Algorithms::generatePermutations3;
+
+
+        System.out.println("Measuring " + label + " nr " + times);
+        series.add(measureAlgorithm3.measure(5000000, 5000000));
+        series.add(measureAlgorithm3.measure(10000000, 10000000));
+        series.add(measureAlgorithm3.measure(20000000, 20000000));
+        series.add(measureAlgorithm3.measure(40000000, 40000000));
+        series.add(measureAlgorithm3.measure(80000000, 80000000));
+        System.out.println("Measurement done");
+
+        dataset.addSeries(series);
+
+        return measureAlgorithm3(label, dataset, times - 1);
+
+    }
 
 
 }

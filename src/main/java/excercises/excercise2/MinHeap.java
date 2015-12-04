@@ -28,6 +28,8 @@ public class MinHeap implements Heap {
         for(int i = 0; i<itemsSize; i++){
             buffer[i] = Algorithms.randInt(100);
         }
+        heapSize = buffer.length;
+        printHeap();
         buildHeap();
         printHeap();
 
@@ -45,18 +47,22 @@ public class MinHeap implements Heap {
         }
     }
 
+    public void clearHeapToOutput(){
+        for(int i = heapSize; i>0 ; i--){
+            heapOutput.write(removeFirstAndInsertToDeadspace(EMPTY_SPACE_VALUE));
+        }
+    }
+
     @Override
     public void buildHeap() {
         heapSize = buffer.length;
         heapOutput.newRun();
         System.out.println("New Run");
         //all the parents
-        for(int i = ((heapSize/2)); i>-1; i--){
-            if(isParent(i)){
+        for(int i = heapSize-1; i>=0; i--){
                 perculateDown(i);
-                perculateDown(i);
-            }
         }
+
     }
 
     @Override
@@ -67,6 +73,7 @@ public class MinHeap implements Heap {
         buffer[0] = buffer[heapSize];
         buffer[heapSize] = input;
         sortHeap();
+        printHeap();
         return first;
     }
 
@@ -104,7 +111,7 @@ public class MinHeap implements Heap {
 
     private int setLeftChild(int index, int value){
         int temp = getLeftChild(index);
-        buffer[(index+1)*2-1] = value;
+        buffer[((index+1)*2)-1] = value;
         return temp;
     }
 
@@ -122,38 +129,34 @@ public class MinHeap implements Heap {
     }
     private void perculateDown(int index){
         int parentValue = buffer[index];
-        if(getRightChild(index) == EMPTY_SPACE_VALUE && getLeftChild(index) == EMPTY_SPACE_VALUE){
+        if(!isParent(index)){
             return;
-        }
-        if(getRightChild(index) == EMPTY_SPACE_VALUE && parentValue>getLeftChild(index)){
-            buffer[index] = setLeftChild(index, parentValue);
-        }
-        if(parentValue>getLeftChild(index) || parentValue > getRightChild(index)){
-            if(getLeftChild(index)>=getRightChild(index) && getRightChild(index) != EMPTY_SPACE_VALUE){
-                //right must go up and parent to the right
-                buffer[index] = setRightChild(index, parentValue);
-                if(isParent((index+1)*2)){
-                    perculateDown((index+1)*2);
-                    perculateDown(index);
-                }
-            } else {
-                //left must go up and parent to the left
-                buffer[index] = setLeftChild(index, parentValue);
-                if(isParent((index+1)*2-1)){
-                    perculateDown(((index+1)*2-1));
-                    perculateDown(index);
-                }
+        } else if(getLeftChild(index)>getRightChild(index) && getRightChild(index) != EMPTY_SPACE_VALUE){
+            //right down
+            if(parentValue>getRightChild(index)){
+                buffer[index] = setRightChild(index, buffer[index]);
+                perculateDown((index+1)* 2);
+            }
+        } else {
+            //left down
+            if(parentValue>getLeftChild(index)){
+                buffer[index] = setLeftChild(index, buffer[index]);
+                perculateDown(((index+1)*2-1));
             }
         }
+
+
+
+
     }
     private boolean isParent(int index){
-        return(((index+1)*2)<=heapSize);
+        return (getLeftChild(index) != EMPTY_SPACE_VALUE);
     }
     private void printHeap(){
-        System.out.print("Heap = ");
+        System.out.print("Heap = [");
         for(int i =0 ; i<heapSize ; i++){
-            System.out.print(buffer[i] + " ");
+            System.out.print(buffer[i] + ", ");
         }
-        System.out.println();
+        System.out.println("]");
     }
 }

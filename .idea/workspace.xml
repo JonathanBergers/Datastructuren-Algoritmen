@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a66ba8b3-461c-4807-add4-8a2bc333fd01" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/excercises/utilities/Algorithms.java" afterPath="$PROJECT_DIR$/src/main/java/excercises/utilities/Algorithms.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataStructAlg.iml" afterPath="$PROJECT_DIR$/DataStructAlg.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java" afterPath="$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/Heap.java" afterPath="$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/Heap.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java" afterPath="$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java" afterPath="$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -36,12 +32,12 @@
       <file leaf-file-name="MinHeap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73615634">
-              <caret line="98" column="23" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.9382504">
+              <caret line="140" column="23" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3915#3916#0" expanded="true" />
-                <element signature="e#3962#3963#0" expanded="true" />
+                <element signature="e#3604#3605#0" expanded="true" />
+                <element signature="e#3669#3670#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,11 +67,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+              <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#894#895#0" expanded="true" />
-                <element signature="e#924#925#0" expanded="true" />
+                <element signature="e#812#813#0" expanded="true" />
+                <element signature="e#842#843#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -169,8 +165,8 @@
         <option value="$PROJECT_DIR$/src/main/java/excercises/excercise1/Excercise1.java" />
         <option value="$PROJECT_DIR$/src/main/java/excercises/utilities/Algorithms.java" />
         <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/Heap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java" />
         <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java" />
         <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java" />
       </list>
     </option>
@@ -783,7 +779,7 @@
       <workItem from="1448368015026" duration="4071000" />
       <workItem from="1448977373554" duration="2449000" />
       <workItem from="1449056753423" duration="6481000" />
-      <workItem from="1449226110159" duration="8207000" />
+      <workItem from="1449226110159" duration="14240000" />
     </task>
     <task id="LOCAL-00001" summary="initialize">
       <created>1447856372408</created>
@@ -809,11 +805,17 @@
       <option name="project" value="LOCAL" />
       <updated>1449061843337</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ok">
+      <created>1449234463589</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1449234463589</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29954000" />
+    <option name="totallyTimeSpent" value="35987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="24" width="1851" height="1056" extended-state="6" />
@@ -832,6 +834,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2825485" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -843,7 +846,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -862,7 +864,8 @@
     <MESSAGE value="naamgeving beetje gefixt" />
     <MESSAGE value="opdracht 1" />
     <MESSAGE value="Merge branch 'master' of https://github.com/JonathanBergers/Datastructuren-Algoritmen&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;src/main/java/excercises/excercise1/Excercise1.java&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/JonathanBergers/Datastructuren-Algoritmen&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;src/main/java/excercises/excercise1/Excercise1.java&#10;" />
+    <MESSAGE value="ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="ok" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1219,6 +1222,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/Heap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1230,31 +1241,23 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+          <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73615634">
-          <caret line="98" column="23" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.9382504">
+          <caret line="140" column="23" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3915#3916#0" expanded="true" />
-            <element signature="e#3962#3963#0" expanded="true" />
+            <element signature="e#3604#3605#0" expanded="true" />
+            <element signature="e#3669#3670#0" expanded="true" />
           </folding>
         </state>
       </provider>

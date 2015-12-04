@@ -15,7 +15,7 @@ public class HeapOutput implements Output {
     public void write(int number) {
         output.add(number);
         if(!isListSorted()){
-            System.out.println(output.toString());
+            System.out.println("not sorted");
 
         }
         //System.out.println(isListSorted());
@@ -28,7 +28,6 @@ public class HeapOutput implements Output {
         }
         for(int i = 1; i<output.size();i++){
             if(output.get(i-1)>output.get(i)){
-                System.out.println(output.get(i-1) + " > " + output.get(i));
                 return false;
             }
         }

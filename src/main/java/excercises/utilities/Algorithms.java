@@ -79,7 +79,7 @@ public class Algorithms {
     }
 
 
-    private static int randInt(int n){
+    public static int randInt(int n){
         return (int) (Math.random() * n);
     }
 

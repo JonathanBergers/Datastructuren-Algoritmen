@@ -1,7 +1,42 @@
 package excercises.excercise2;
 
+import excercises.excercise2.interfaces.Output;
+import excercises.utilities.Algorithms;
+
+import java.util.ArrayList;
+
 /**
  * Created by falco on 2-12-15.
  */
-public class HeapOutput {
+public class HeapOutput implements Output {
+    private ArrayList<Integer> output = new ArrayList<>();
+
+    @Override
+    public void write(int number) {
+        output.add(number);
+        if(!isListSorted()){
+            System.out.println(output.toString());
+
+        }
+        //System.out.println(isListSorted());
+
+    }
+
+    private boolean isListSorted(){
+        if(output.size()==1){
+            return true;
+        }
+        for(int i = 1; i<output.size();i++){
+            if(output.get(i-1)>output.get(i)){
+                System.out.println(output.get(i-1) + " > " + output.get(i));
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public void newRun(){
+        output.clear();
+    }
 }

@@ -15,7 +15,7 @@ public interface Heap {
      *
      * @param items
      */
-    void fillHeap(int[] items);
+    void fillHeap(int items);
 
     /**Processes the input and writes to the output.
      *
@@ -39,21 +39,14 @@ public interface Heap {
      *
      * @return
      */
-    int removeFirst();
-
-
-    /**writes the input to the dead space
-     *
-     * @param input
-     */
-    void insertToDeadspace(int input);
+    int removeFirstAndInsertToDeadspace(int input);
 
 
     /**writes the input to the heap
      *
      * @param input
      */
-    void insertToHeap(int input);
+    int removeFirstAndInsertToHeap(int input);
 
 
     /**Use heapsort to sort the heap

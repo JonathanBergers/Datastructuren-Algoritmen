@@ -1,7 +1,6 @@
 package excercises.excercise2;
 
 import excercises.excercise2.interfaces.Output;
-import excercises.utilities.Algorithms;
 
 import java.util.ArrayList;
 
@@ -10,7 +9,7 @@ import java.util.ArrayList;
  */
 public class HeapOutput implements Output {
     private ArrayList<Integer> output = new ArrayList<>();
-    private ArrayList<Integer> runLengths = new ArrayList<>();
+    private ArrayList<Integer> runIndices = new ArrayList<>();
 
     @Override
     public void write(int number) {
@@ -37,8 +36,10 @@ public class HeapOutput implements Output {
     }
 
     public void newRun(){
-        runLengths.add(output.size());
-        System.out.println(output.size());
+
+        runIndices.add(output.size());
+
+        System.out.println("New Run, SIZE: " + output.size());
         output.clear();
     }
 }

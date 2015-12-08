@@ -1,5 +1,7 @@
 package excercises.excercise2.interfaces;
 
+import excercises.excercise2.RandomInput;
+
 import java.util.List;
 
 /**
@@ -8,22 +10,12 @@ import java.util.List;
 public interface Heap {
 
 
+
     /**use for initialization
      * fills the heap with the items
      *
-     *
-     *
-     * @param items
      */
-    void fillHeap(int items);
-
-    /**Processes the input and writes to the output.
-     *
-     * Psuedocode
-     *
-     * @param input
-     */
-    void processInput(int input);
+    void fillHeap(Input input) throws OutOfInputException;
 
 
     /**sorts the heap

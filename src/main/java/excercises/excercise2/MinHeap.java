@@ -1,67 +1,111 @@
 package excercises.excercise2;
 
-import excercises.excercise2.interfaces.Heap;
+import excercises.excercise2.interfaces.*;
 import excercises.utilities.Algorithms;
 
 /**
  * Created by jonathan on 1-12-15.
  */
-public class MinHeap implements Heap {
+public class MinHeap implements Heap, ReplacementSelection {
 
     private final static int EMPTY_SPACE_VALUE = -69;
-
     private int heapSize;
-
-    private int[] buffer;
-
+    private final int[] buffer;
     private HeapOutput heapOutput = new HeapOutput();
+    private Input input;
+
+    public MinHeap(RandomInput input, int bufferSize) {
+        heapSize = bufferSize;
+        this.buffer = new int[heapSize];
+        this.input = input;
 
 
-    public MinHeap(int bufferSize) {
-        buffer = new int[bufferSize];
-        fillHeap(bufferSize);
+
+    }
+
+    /**Sorts the input and writes the runs to the output.
+     *
+     * @return
+     */
+    public Output run(){
+        fillHeap(input);
+
+        while (true){
+            try {
+                processInput(input);
+            } catch (OutOfInputException e) {
+                heapSize = buffer.length;
+                buildHeap();
+                clearHeapToOutput();
+                return heapOutput;
+            }
+        }
+
+
     }
 
 
     @Override
-    public void fillHeap(int itemsSize) {
-        for(int i = 0; i<itemsSize; i++){
-            buffer[i] = Algorithms.randInt(100);
+    public void fillHeap(Input input){
+
+        for(int i = 0; i<heapSize; i++){
+            try {
+                buffer[i] = input.getInput();
+            } catch (OutOfInputException e) {
+                heapSize = i;
+                break;
+            }
+            // for smaller input
+
         }
-        heapSize = buffer.length;
-        //printHeap();
+
         buildHeap();
-        //printHeap();
 
     }
 
     @Override
-    public void processInput(int input) {
-        if(buffer[0]>input){
-            heapOutput.write(removeFirstAndInsertToDeadspace(input));
+    public void processInput(Input input) throws OutOfInputException {
+        int inputNumber;
+        inputNumber = input.getInput();
+
+        if(buffer[0]>inputNumber){
+            heapOutput.write(removeFirstAndInsertToDeadspace(inputNumber));
         } else {
-            heapOutput.write(removeFirstAndInsertToHeap(input));
+            heapOutput.write(removeFirstAndInsertToHeap(inputNumber));
         }
+        // when heap is empty
         if(heapSize==0){
             buildHeap();
         }
+
+
+
     }
 
     public void clearHeapToOutput(){
+
         for(int i = heapSize; i>0 ; i--){
             heapOutput.write(removeFirstAndInsertToDeadspace(EMPTY_SPACE_VALUE));
         }
+
         heapOutput.newRun();
     }
 
     @Override
     public void buildHeap() {
-        heapSize = buffer.length;
+
+        //when fillheap cant complete cuz input, then heapsize = input. so
+        // only when size = deadspace  then reset heapsize
+        if(heapSize == 0){
+            heapSize = buffer.length;
+
+
+        }
+
         heapOutput.newRun();
-        System.out.println("New Run");
         //all the parents
         for(int i = heapSize-1; i>=0; i--){
-                perculateDown(i);
+            perculateDown(i);
         }
 
     }
@@ -74,6 +118,7 @@ public class MinHeap implements Heap {
         buffer[0] = buffer[heapSize];
         buffer[heapSize] = input;
         sortHeap();
+
         //printHeap();
         return first;
     }
@@ -94,6 +139,8 @@ public class MinHeap implements Heap {
     public void sortHeap() {
         perculateDown(0);
     }
+
+
 
 
     private int getLeftChild(int index){
@@ -123,11 +170,6 @@ public class MinHeap implements Heap {
         return temp;
     }
 
-
-
-    private void perculateUp(int index){
-
-    }
     private void perculateDown(int index){
         int parentValue = buffer[index];
         if(!isParent(index)){
@@ -153,6 +195,8 @@ public class MinHeap implements Heap {
     private boolean isParent(int index){
         return (getLeftChild(index) != EMPTY_SPACE_VALUE);
     }
+
+
     private void printHeap(){
         System.out.print("Heap = [");
         for(int i =0 ; i<heapSize ; i++){

@@ -1,5 +1,7 @@
 package excercises.excercise2.interfaces;
 
+import excercises.excercise2.RandomInput;
+
 /**
  * Created by jonathan on 1-12-15.
  */
@@ -10,7 +12,7 @@ public interface Input {
      *
      * @return
      */
-    int getInput();
+    int getInput() throws OutOfInputException;
 
 
 

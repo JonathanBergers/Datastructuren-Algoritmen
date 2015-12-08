@@ -9,10 +9,12 @@ import javafx.stage.Stage;
 public class Excercise2 {
 
     public static void main(String[] args) {
-        MinHeap minHeap = new MinHeap(10);
-        for(int i =5; i<20;i++){
-            minHeap.processInput(i + Algorithms.randInt(80));
+        MinHeap minHeap = new MinHeap(200);
+        for(int i =0; i<200;i++){
+            minHeap.processInput(i + Algorithms.randInt(100000));
         }
+        minHeap.clearHeapToOutput();
+
 
 
     }

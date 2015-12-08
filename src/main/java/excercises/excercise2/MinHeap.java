@@ -29,9 +29,9 @@ public class MinHeap implements Heap {
             buffer[i] = Algorithms.randInt(100);
         }
         heapSize = buffer.length;
-        printHeap();
+        //printHeap();
         buildHeap();
-        printHeap();
+        //printHeap();
 
     }
 
@@ -51,6 +51,7 @@ public class MinHeap implements Heap {
         for(int i = heapSize; i>0 ; i--){
             heapOutput.write(removeFirstAndInsertToDeadspace(EMPTY_SPACE_VALUE));
         }
+        heapOutput.newRun();
     }
 
     @Override
@@ -67,23 +68,23 @@ public class MinHeap implements Heap {
 
     @Override
     public int removeFirstAndInsertToDeadspace(int input) {
-        System.out.println("Insert into deadspace " + input);
+        //System.out.println("Insert into deadspace " + input);
         heapSize--;
         int first = buffer[0];
         buffer[0] = buffer[heapSize];
         buffer[heapSize] = input;
         sortHeap();
-        printHeap();
+        //printHeap();
         return first;
     }
 
     @Override
     public int removeFirstAndInsertToHeap(int input) {
-        System.out.println("Insert into heap " + input);
+        //System.out.println("Insert into heap " + input);
         int first = buffer[0];
         buffer[0] = input;
         sortHeap();
-        printHeap();
+        //printHeap();
         return first;
     }
 

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a66ba8b3-461c-4807-add4-8a2bc333fd01" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java" afterPath="$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java" afterPath="$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java" afterPath="$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -29,15 +30,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MinHeap.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MinHeap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9382504">
-              <caret line="140" column="23" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
+            <state vertical-scroll-proportion="-7.193548">
+              <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3604#3605#0" expanded="true" />
-                <element signature="e#3669#3670#0" expanded="true" />
+                <element signature="e#3645#3646#0" expanded="true" />
+                <element signature="e#3710#3711#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Excercise2.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Excercise2.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.32247558">
+              <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -67,11 +68,9 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#812#813#0" expanded="true" />
-                <element signature="e#842#843#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/Input.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -165,9 +164,9 @@
         <option value="$PROJECT_DIR$/src/main/java/excercises/excercise1/Excercise1.java" />
         <option value="$PROJECT_DIR$/src/main/java/excercises/utilities/Algorithms.java" />
         <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/Heap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java" />
         <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java" />
         <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java" />
+        <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java" />
       </list>
     </option>
   </component>
@@ -779,7 +778,7 @@
       <workItem from="1448368015026" duration="4071000" />
       <workItem from="1448977373554" duration="2449000" />
       <workItem from="1449056753423" duration="6481000" />
-      <workItem from="1449226110159" duration="14240000" />
+      <workItem from="1449226110159" duration="16061000" />
     </task>
     <task id="LOCAL-00001" summary="initialize">
       <created>1447856372408</created>
@@ -811,11 +810,17 @@
       <option name="project" value="LOCAL" />
       <updated>1449234463589</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="working">
+      <created>1449240500146</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1449240500146</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35987000" />
+    <option name="totallyTimeSpent" value="37808000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="24" width="1851" height="1056" extended-state="6" />
@@ -865,7 +870,8 @@
     <MESSAGE value="opdracht 1" />
     <MESSAGE value="Merge branch 'master' of https://github.com/JonathanBergers/Datastructuren-Algoritmen&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;src/main/java/excercises/excercise1/Excercise1.java&#10;" />
     <MESSAGE value="ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok" />
+    <MESSAGE value="working" />
+    <option name="LAST_COMMIT_MESSAGE" value="working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1217,15 +1223,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/Input.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1241,24 +1239,30 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
-            <element signature="e#842#843#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9382504">
-          <caret line="140" column="23" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
+        <state vertical-scroll-proportion="-7.193548">
+          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3604#3605#0" expanded="true" />
-            <element signature="e#3669#3670#0" expanded="true" />
+            <element signature="e#3645#3646#0" expanded="true" />
+            <element signature="e#3710#3711#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32247558">
+          <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>

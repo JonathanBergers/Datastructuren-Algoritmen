@@ -10,6 +10,7 @@ import java.util.ArrayList;
  */
 public class HeapOutput implements Output {
     private ArrayList<Integer> output = new ArrayList<>();
+    private ArrayList<Integer> runLengths = new ArrayList<>();
 
     @Override
     public void write(int number) {
@@ -36,6 +37,8 @@ public class HeapOutput implements Output {
     }
 
     public void newRun(){
+        runLengths.add(output.size());
+        System.out.println(output.size());
         output.clear();
     }
 }

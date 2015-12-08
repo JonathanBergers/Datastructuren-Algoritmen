@@ -6,7 +6,7 @@ import excercises.utilities.Algorithms;
 /**
  * Created by jonathan on 1-12-15.
  */
-public class MinHeap implements Heap, ReplacementSelection {
+public class RSHeap implements Heap, ReplacementSelection {
 
     private final static int EMPTY_SPACE_VALUE = -69;
     private int heapSize;
@@ -14,9 +14,9 @@ public class MinHeap implements Heap, ReplacementSelection {
     private HeapOutput heapOutput = new HeapOutput();
     private Input input;
 
-    public MinHeap(RandomInput input, int bufferSize) {
+    public RSHeap(RandomInput input, int bufferSize) {
         heapSize = bufferSize;
-        this.buffer = new int[heapSize];
+        this.buffer = new int[heapSize +1];
         this.input = input;
 
 
@@ -34,8 +34,8 @@ public class MinHeap implements Heap, ReplacementSelection {
             try {
                 processInput(input);
             } catch (OutOfInputException e) {
-                heapSize = buffer.length;
-                buildHeap();
+
+                //TODO NOT WORKING, RUN OF LENGTH 0
                 clearHeapToOutput();
                 return heapOutput;
             }
@@ -68,6 +68,8 @@ public class MinHeap implements Heap, ReplacementSelection {
         int inputNumber;
         inputNumber = input.getInput();
 
+
+
         if(buffer[0]>inputNumber){
             heapOutput.write(removeFirstAndInsertToDeadspace(inputNumber));
         } else {
@@ -84,11 +86,27 @@ public class MinHeap implements Heap, ReplacementSelection {
 
     public void clearHeapToOutput(){
 
+
+        //take deadspace
+        heapSize = buffer.length;
+
+
+
+
+        //TODO BUG
+        // sort the heap
+        //all the parents
+
+        heapOutput.newRun();
+        for(int i = heapSize-1; i>=0; i--){
+            perculateDown(i);
+        }
+
+        // write all sorted elements to the output
         for(int i = heapSize; i>0 ; i--){
             heapOutput.write(removeFirstAndInsertToDeadspace(EMPTY_SPACE_VALUE));
         }
 
-        heapOutput.newRun();
     }
 
     @Override
@@ -98,7 +116,6 @@ public class MinHeap implements Heap, ReplacementSelection {
         // only when size = deadspace  then reset heapsize
         if(heapSize == 0){
             heapSize = buffer.length;
-
 
         }
 

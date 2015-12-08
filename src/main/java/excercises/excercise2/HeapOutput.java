@@ -42,4 +42,6 @@ public class HeapOutput implements Output {
         System.out.println("New Run, SIZE: " + output.size());
         output.clear();
     }
+
+
 }

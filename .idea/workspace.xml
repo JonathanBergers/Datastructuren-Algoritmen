@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a66ba8b3-461c-4807-add4-8a2bc333fd01" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/OutOfInputException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/excercises/excercise2/RandomInput.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/ReplacementSelection.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java" afterPath="$PROJECT_DIR$/src/main/java/excercises/excercise2/RSHeap.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java" afterPath="$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/Heap.java" afterPath="$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/Heap.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java" afterPath="$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/Input.java" afterPath="$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/Input.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java" afterPath="$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="32155a0c-d0cf-4b1f-b721-eb6bde71bbba" name="Rejected commit: Default" comment="naamgeving beetje gefixt" />
@@ -35,15 +30,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MinHeap.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java">
+      <file leaf-file-name="RSHeap.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/RSHeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.5866209">
+              <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3072#3073#0" expanded="true" />
-                <element signature="e#3104#3105#0" expanded="true" />
+                <element signature="e#3327#3328#0" expanded="true" />
+                <element signature="e#3359#3360#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -61,16 +56,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OutOfInputException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/OutOfInputException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ReplacementSelection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/ReplacementSelection.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -81,11 +66,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Excercise2.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Excercise2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32247558">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Excercise1.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise1/Excercise1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="75" selection-start-line="29" selection-start-column="8" selection-end-line="30" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -105,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+              <caret line="41" column="55" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -189,9 +184,10 @@
         <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/Input.java" />
         <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/Heap.java" />
         <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/interfaces/ReplacementSelection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java" />
         <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java" />
         <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java" />
+        <option value="$PROJECT_DIR$/src/main/java/excercises/excercise2/RSHeap.java" />
       </list>
     </option>
   </component>
@@ -215,7 +211,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1979" />
+    <option name="x" value="59" />
     <option name="y" value="24" />
     <option name="width" value="1861" />
     <option name="height" value="1056" />
@@ -315,6 +311,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataStructAlg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataStructAlg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="excercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utilities" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1085,7 +1111,7 @@
       <workItem from="1448977373554" duration="2449000" />
       <workItem from="1449056753423" duration="6481000" />
       <workItem from="1449226110159" duration="16061000" />
-      <workItem from="1449566453102" duration="3518000" />
+      <workItem from="1449566453102" duration="5765000" />
     </task>
     <task id="LOCAL-00001" summary="initialize">
       <created>1447856372408</created>
@@ -1123,14 +1149,20 @@
       <option name="project" value="LOCAL" />
       <updated>1449240500146</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="final touch, need to do some measurements">
+      <created>1449570154497</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1449570154497</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41326000" />
+    <option name="totallyTimeSpent" value="43573000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1979" y="24" width="1861" height="1056" extended-state="6" />
+    <frame x="59" y="24" width="1861" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1147,6 +1179,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28209367" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1157,7 +1190,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1178,7 +1210,8 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/JonathanBergers/Datastructuren-Algoritmen&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;src/main/java/excercises/excercise1/Excercise1.java&#10;" />
     <MESSAGE value="ok" />
     <MESSAGE value="working" />
-    <option name="LAST_COMMIT_MESSAGE" value="working" />
+    <MESSAGE value="final touch, need to do some measurements" />
+    <option name="LAST_COMMIT_MESSAGE" value="final touch, need to do some measurements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1467,13 +1500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise1/Excercise1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="90" column="83" selection-start-line="90" selection-start-column="83" selection-end-line="90" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/excercises/utilities/Algorithms.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1489,14 +1515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/excercises/applet/MeasurementGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="80" selection-start-line="51" selection-start-column="80" selection-end-line="51" selection-end-column="80" />
           <folding />
         </state>
       </provider>
@@ -1527,14 +1545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/excercises/utilities/Measurement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/RandomInput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1555,33 +1565,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/excercises/applet/MeasurementGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="51" column="80" selection-start-line="51" selection-start-column="80" selection-end-line="51" selection-end-column="80" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/MinHeap.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/excercises/utilities/Measurement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3072#3073#0" expanded="true" />
-            <element signature="e#3104#3105#0" expanded="true" />
-          </folding>
+          <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise1/Excercise1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="75" selection-start-line="29" selection-start-column="8" selection-end-line="30" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/Excercise2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32247558">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/HeapOutput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="55" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/excercises/excercise2/RSHeap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5866209">
+          <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3327#3328#0" expanded="true" />
+            <element signature="e#3359#3360#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

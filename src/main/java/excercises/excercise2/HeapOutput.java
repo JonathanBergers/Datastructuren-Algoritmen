@@ -39,8 +39,13 @@ public class HeapOutput implements Output {
 
         runIndices.add(output.size());
 
-        System.out.println("New Run, SIZE: " + output.size());
+        //System.out.println("New Run, SIZE: " + output.size());
         output.clear();
+    }
+
+    public double getAverageRunLength(){
+        return runIndices.stream().mapToInt(i -> i).average().orElse(0);
+
     }
 
 

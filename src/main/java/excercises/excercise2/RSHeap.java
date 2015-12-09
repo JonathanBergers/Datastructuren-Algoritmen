@@ -6,13 +6,13 @@ import excercises.utilities.Algorithms;
 /**
  * Created by jonathan on 1-12-15.
  */
-public class RSHeap implements Heap, ReplacementSelection {
+public class RSHeap implements Heap, ReplacementSelection<RandomInput, HeapOutput> {
 
     private final static int EMPTY_SPACE_VALUE = -69;
     private int heapSize;
     private final int[] buffer;
     private HeapOutput heapOutput = new HeapOutput();
-    private Input input;
+    private RandomInput input;
 
     public RSHeap(RandomInput input, int bufferSize) {
         heapSize = bufferSize;
@@ -27,15 +27,14 @@ public class RSHeap implements Heap, ReplacementSelection {
      *
      * @return
      */
-    public Output run(){
+    public HeapOutput run(){
         fillHeap(input);
 
         while (true){
             try {
+
                 processInput(input);
             } catch (OutOfInputException e) {
-
-                //TODO NOT WORKING, RUN OF LENGTH 0
                 clearHeapToOutput();
                 return heapOutput;
             }
@@ -55,6 +54,7 @@ public class RSHeap implements Heap, ReplacementSelection {
                 heapSize = i;
                 break;
             }
+
             // for smaller input
 
         }
@@ -64,7 +64,7 @@ public class RSHeap implements Heap, ReplacementSelection {
     }
 
     @Override
-    public void processInput(Input input) throws OutOfInputException {
+    public void processInput(RandomInput input) throws OutOfInputException {
         int inputNumber;
         inputNumber = input.getInput();
 
@@ -75,8 +75,12 @@ public class RSHeap implements Heap, ReplacementSelection {
         } else {
             heapOutput.write(removeFirstAndInsertToHeap(inputNumber));
         }
+
+        //System.out.println("Heapsize: " + heapSize);
         // when heap is empty
         if(heapSize==0){
+            //System.out.println("Heap is empty, new run");
+            heapOutput.newRun();
             buildHeap();
         }
 
@@ -86,26 +90,23 @@ public class RSHeap implements Heap, ReplacementSelection {
 
     public void clearHeapToOutput(){
 
-
-        //take deadspace
-        heapSize = buffer.length;
-
-
-
-
-        //TODO BUG
-        // sort the heap
-        //all the parents
-
+        // start the lst run
         heapOutput.newRun();
-        for(int i = heapSize-1; i>=0; i--){
-            perculateDown(i);
-        }
+        // include the deadspace
+        heapSize = buffer.length;
+        //sort
+        sortHeap();
+        buildHeap();
+
+        //System.out.println("clearing");
 
         // write all sorted elements to the output
         for(int i = heapSize; i>0 ; i--){
             heapOutput.write(removeFirstAndInsertToDeadspace(EMPTY_SPACE_VALUE));
         }
+
+        // done
+
 
     }
 
@@ -119,7 +120,7 @@ public class RSHeap implements Heap, ReplacementSelection {
 
         }
 
-        heapOutput.newRun();
+        //heapOutput.newRun();
         //all the parents
         for(int i = heapSize-1; i>=0; i--){
             perculateDown(i);

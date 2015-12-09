@@ -3,7 +3,7 @@ package excercises.excercise2.interfaces;
 /**
  * Created by jonathan on 8-12-15.
  */
-public interface ReplacementSelection {
+public interface ReplacementSelection<I extends Input, O extends Output> {
 
 
     /**Processes the input and writes to the output.
@@ -11,9 +11,9 @@ public interface ReplacementSelection {
      * Psuedocode
      *
      */
-    void processInput(Input input) throws OutOfInputException;
+    void processInput(I input) throws OutOfInputException;
 
 
-    Output run();
+    O run();
 
 }
